@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PHP приложение - сравнения содержимое двух файлов</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+    <style>
+        .center {
+            width: 50%;
+            padding: 10px;
+            margin: auto;
+            background: #fc0;
+        }
+        td {
+            padding-right: 27px;
+        }
+        p {
+            margin-bottom: 0rem;
+        }
+        .result_h2 {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <h1>PHP приложение - сравнения содержимое двух файлов</h1>
+
+        <ul id="fileList">
+        </ul>
+
+        <form class="form" id="myForm">
+            <input type="file" id="inpFile">
+            <input type="submit" value="Добавить файл к сравнению">
+        </form>
+
+        <br>
+
+        <form id="formDiff" method="post" action="diff.php">
+            <input type="submit" value="Сравнить файлы">
+        </form>
+
+        <div id="files"></div>
+
+        <h2 class="result_h2">Результат сравнения</h2>
+        <table id="result"></table>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
